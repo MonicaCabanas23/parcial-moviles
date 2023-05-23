@@ -1,4 +1,4 @@
-package com.example.citytracker.ui.city
+package com.example.citytracker.ui.city.cityList
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
