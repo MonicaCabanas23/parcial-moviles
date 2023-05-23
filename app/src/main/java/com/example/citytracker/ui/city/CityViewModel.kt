@@ -1,4 +1,4 @@
-package com.example.citytracker.ui
+package com.example.citytracker.ui.city
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

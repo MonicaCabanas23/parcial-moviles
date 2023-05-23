@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.city.CityListFragment">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.citytracker.ui.city.CityViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.city.CityListFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nombreContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_gap"
+            android:layout_marginStart="@dimen/big_gap"
+            android:layout_marginTop="@dimen/big_gap"
+            android:layout_marginEnd="@dimen/big_gap"
+            android:hint="@string/hintNombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nombre_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/poblacionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_gap"
+            android:layout_marginStart="@dimen/big_gap"
+            android:layout_marginTop="@dimen/medium_gap"
+            android:layout_marginEnd="@dimen/big_gap"
+            android:hint="@string/poblacionHint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nombreContainer">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/poblacion_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/addTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/big_gap"
+            android:layout_marginTop="@dimen/big_gap"
+            android:layout_marginEnd="@dimen/big_gap"
+            android:text="Agrega una nueva ciudad"
+            android:textSize="@dimen/titleSize"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/addNewCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_gap"
+            android:text="Agregar"
+            app:layout_constraintEnd_toEndOf="@+id/poblacionContainer"
+            app:layout_constraintStart_toStartOf="@+id/poblacionContainer"
+            app:layout_constraintTop_toBottomOf="@+id/poblacionContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
